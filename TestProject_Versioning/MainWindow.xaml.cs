@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,6 +25,17 @@ namespace TestProject_Versioning
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void MetroWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            txt_version.Text = AssemblyInfoHelper.AssemblyInfoHelperClass.AssemblyVersion;
+
+            object[] assemblyObjects = Assembly.GetEntryAssembly()?.GetCustomAttributes(typeof(AssemblyInformationalVersionAttribute), true);
+            if (assemblyObjects.Length > 0)
+            {
+                txt_infoversion.Text = ((AssemblyInformationalVersionAttribute)assemblyObjects[0]).InformationalVersion;
+            }
         }
     }
 }
