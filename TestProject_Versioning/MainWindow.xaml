@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:TestProject_Versioning"
         xmlns:infoHelper="clr-namespace:AssemblyInfoHelper;assembly=AssemblyInfoHelper"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="MetroWindow_Loaded">
+        Title="TestProject Versioning" Height="450" Width="800" Loaded="MetroWindow_Loaded">
 
     <MetroControls:MetroWindow.RightWindowCommands>
         <MetroControls:WindowCommands>
