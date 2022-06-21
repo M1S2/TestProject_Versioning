@@ -8,3 +8,5 @@ using System.Windows;
                                               //(used if a resource is not found in the page,
                                               // app, or any theme specific resource dictionaries)
 )]
+
+[assembly:AssemblyInfoHelper.GitHub.GitHubRepo("https://github.com/M1S2/TestProject_Versioning")]
